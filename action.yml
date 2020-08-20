@@ -1,0 +1,15 @@
+name: Open Coverage Notifier Action
+author: Anuj Kapoor <Bearbobs@github.com>
+description: Sends a comment notifcation regarding code coverage in pul requests
+branding:
+  icon: 'message-square'  
+  color: 'black'
+inputs:
+  path: 
+    description: file path
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
