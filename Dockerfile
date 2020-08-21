@@ -11,7 +11,7 @@ RUN gem install octokit
 
 ADD edit.sh /edit.sh
 RUN chmod +x /edit.sh
-RUN bash -c /edit.sh
+RUN /edit.sh
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
