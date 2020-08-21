@@ -5,14 +5,14 @@ jobs:
     name: example
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - run: mkdir -p output/
       - run: echo "testing if works" > output/results.txt
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         with:
           name: results
           path: output
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v2
         with:
           name: results
       - name: Open Coverage Notifier Action
