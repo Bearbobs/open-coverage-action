@@ -16,7 +16,7 @@ jobs:
         with:
           name: results
       - name: Open Coverage Notifier Action
-        uses: Bearbobs/open-coverage-action@v2
+        uses: Bearbobs/open-coverage-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
