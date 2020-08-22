@@ -10,8 +10,6 @@ LABEL "com.github.actions.color"="black"
 RUN gem install octokit
 
 ADD edit.sh /edit.sh
-RUN chmod +x /edit.sh
-RUN /edit.sh
-
 ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+RUN chmod +x /edit.sh
+ENTRYPOINT ["/edit.sh"]
